@@ -13,6 +13,7 @@ export class UpdateComponent implements OnInit {
   public user={
     firstName: null,
     lastName: null,
+    password: null,
     email: null,
     phoneNumber: null,
     role: null

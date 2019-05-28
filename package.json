@@ -1,6 +1,4 @@
 {
-  
-  
   "name": "spring-security",
   "version": "0.0.0",
   "scripts": {
@@ -10,24 +8,23 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --target=production"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/animations": "^7.2.15",
     "@angular/cli": "~7.3.8",
-    "@angular/compiler-cli": "~7.2.0",
-    
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
-    
+    "@angular/compiler-cli": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "angular-weather-widget": "^1.2.4",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "express": "^4.17.0",
     "ngx-toastr": "^10.0.4",
@@ -40,7 +37,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
-   
     "@angular/language-service": "~7.2.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
@@ -56,9 +52,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0"
-    
   },
-  "engines":{
+  "engines": {
     "node": "8.10.0",
     "npm": "3.5.2"
   }
