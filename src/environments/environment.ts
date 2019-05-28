@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://dooloo.herokuapp.com/'
+  api: 'https://doolooapp.herokuapp.com/'
 };
 
 /*
