@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#predmeti {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#predmeti td, #predmeti th {
+  border: 1px solid rgb(172, 153, 153);
+  padding: 8px;
+}
+
+#predmeti tr:nth-child(even){background-color: #f2f2f2;}
+
+#predmeti tr:hover {background-color: rgb(189, 156, 156);}
+
+#predmeti th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(160, 53, 76);
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<table id="predmeti">
+  <tr>
+    <th>ID</th>
+    <th>Naziv</th>
+    <th>Semestar</th>
+    <th>ESPB</th>
+    <th>Izborni/Obavezni</th>
+    <th>Brisi</th>
+    <th>Izmeni</th>
+   
+  </tr>
+  <tr *ngFor="let subject of objekat">
+      <td>{{subject.id_course}}</td>
+      <td>{{subject.course_name}}</td>
+      <td>{{subject.semester}}</td>
+      <td>{{subject.espb}}</td>
+      <td>{{subject.is_mandatory}}</td>
+      <td><button class="btn btn-sm btn-outline-danger" (click)="deleteRow(subject.id_course)">Delete</button></td> 
+      <td><button class="btn btn-sm btn-outline-info" (click)="updateRow(subject.id_course)">Update</button></td>
+  </tr>
+
+
+
+
+  
+</table>
+<button class="btn btn-warning" routerLink="/insert-forma" style="width: 20%; margin-left:40%">UNESI PREDMET</button>
+</div>
+
+</body>
+</html>

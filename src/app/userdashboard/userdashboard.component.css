@@ -1,0 +1,32 @@
+table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+h2{
+  
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center
+    
+}
+td{
+    border: 1px solid rgb(172, 153, 153);
+    padding: 8px;
+  }
+   
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(32, 150, 124);
+    color: white;
+  }
+    
+
+tr{
+    color:  rgb(7, 125, 141);
+    font-family: serif;
+    text-align: center
+}
+tr:hover {background-color: rgb(172, 195, 218);}
+tr:nth-child(even){background-color: #f2f2f2;}

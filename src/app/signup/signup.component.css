@@ -1,0 +1,43 @@
+input[type=text] {
+    border: 2px solid rgb(10, 53, 53);
+    border-radius: 15px;
+    width: 50%;
+    height: 40px;
+    width: 50%; 
+    margin-left:25%
+  }
+
+  input[type=password] {
+    border: 2px solid rgb(10, 53, 53);
+    border-radius: 15px;
+    width: 50%;
+    height: 40px;
+    width: 50%; 
+    margin-left:25%
+  }
+ select{
+    border: 2px solid rgb(10, 53, 53);
+    border-radius: 15px;
+    width: 50%;
+    height: 40px;
+    width: 50%; margin-left:25%
+  }
+.text-danger{
+  margin-left: 30%
+}
+input[type=tel] {
+  border: 2px solid rgb(10, 53, 53);
+  border-radius: 15px;
+  width: 50%;
+  height: 40px;
+  width: 50%; 
+  margin-left:25%
+}
+input[type=email] {
+  border: 2px solid rgb(10, 53, 53);
+  border-radius: 15px;
+  width: 50%;
+  height: 40px;
+  width: 50%; 
+  margin-left:25%
+}

@@ -1,0 +1,36 @@
+
+
+<div class="container-fluid">
+  <h2 style="text-align:center; color: rgb(43, 128, 128)">Podaci o korisniku</h2>
+             
+  <table class="table table-bordered" style="text-align:center;">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Brisanje</th>
+        <th>Izmena</th>
+        
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstName}}<br>
+        </td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.role}}</td>
+        <td><button class="btn btn-sm btn-outline-danger" (click)="deleteUser(user.id)">Delete</button></td> 
+        <td><button class="btn btn-sm btn-outline-info" (click)="updateUser(user.id)">Update</button></td> 
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+

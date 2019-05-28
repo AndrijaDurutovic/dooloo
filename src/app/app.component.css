@@ -1,0 +1,24 @@
+.dropdown-item{
+    color: lightseagreen;
+  
+}
+.logovankorisnik{
+    margin-top:2.3%;
+    color: rgb(241, 245, 247);
+    font-size: 16px
+    
+    
+}
+#nav {
+   
+    height: 60px;
+    text-align: center
+ 
+}
+
+.mapa{
+    border: 2px solid cyan;
+    text-align:center;
+    margin-top: 50%
+  }
+  

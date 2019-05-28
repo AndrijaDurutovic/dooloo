@@ -1,0 +1,86 @@
+
+
+
+<nav id="nav" class="navbar navbar-expand-md bg-info navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">DoolooApp</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+    
+  </button>
+  
+  
+  <div id="navb" class="navbar-collapse collapse hide">
+    
+      <a class="navbar-brand" href="#" style="max-width: 3%;">
+          <img src="https://cdnaws.recis.io/i/img/00/59/25/57_f02ff9.png" class="img-fluid">
+       </a>
+
+     
+
+    <ul class="navbar-nav">
+       
+    </ul>
+
+    <ul class="nav navbar-nav ml-auto">
+       
+     
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Studijski program
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/informacione-tehnologije">Informacione tehnologije</a>
+             
+            
+            </div>
+          </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+              </button>
+              
+     <div class=dropdown-menu>
+        <a class="dropdown-item" routerLink="/profile">Profile</a>
+        <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/signup']" routerLinkActive *ngIf="!currentStatus.status">Sign Up</a>
+      
+      
+          <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/login']" routerLinkActive *ngIf="!currentStatus.status">Login</a>
+   
+      
+          <a class="dropdown-item" href="javascript:void(0)" (click)="logout()" *ngIf="currentStatus.status">Logout</a>
+
+     </div>
+    </div>
+    <small class="logovankorisnik">{{userName}}</small>
+   
+
+     
+         
+       
+
+   
+        
+ 
+    </ul>
+  </div>
+ 
+
+  
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
