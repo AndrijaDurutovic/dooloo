@@ -2,25 +2,25 @@
 <form>
     <div class="form-group">
         <label for="naziv"></label>
-        <input type="text" name="naziv" class="form-control" id="naziv" aria-describedby="emailHelp" placeholder="Uneti naziv predmeta" [(ngModel)]="subjects.course_name" style="width:50%">
+        <input type="text" name="naziv" class="form-control" id="naziv"  placeholder="Uneti naziv predmeta" [(ngModel)]="subjects.course_name" style="width:50%">
         
       </div>
 
     <div class="form-group">
         <label for="semestar"></label>
-        <input type="text" name="semestar" class="form-control" id="semestar" aria-describedby="emailHelp" placeholder="Uneti semesar" [(ngModel)]="subjects.semester" style="width:50%">
+        <input type="text" name="semestar" class="form-control" id="semestar"  placeholder="Uneti semesar" [(ngModel)]="subjects.semester" style="width:50%">
         
       </div>
 
     <div class="form-group">
         <label for="espb"></label>
-        <input type="text" name="espb" class="form-control" id="espb" aria-describedby="emailHelp" placeholder="ESPB bodovi" [(ngModel)]="subjects.espb" style="width:50%">
+        <input type="text" name="espb" class="form-control" id="espb" placeholder="ESPB bodovi" [(ngModel)]="subjects.espb" style="width:50%">
         
       </div>
 
   <div class="form-group">
     <label for="i/o"></label>
-    <input type="text" name="i/o" class="form-control" id="i/o" aria-describedby="emailHelp" placeholder="Izborni/obavezni Predmet" [(ngModel)]="subjects.is_mandatory" style="width:50%">
+    <input type="text" name="i/o" class="form-control" id="i/o"  placeholder="Izborni/obavezni Predmet" [(ngModel)]="subjects.is_mandatory" style="width:50%">
     
   </div>
   <a href="https://dooloo.herokuapp.com/informacione-tehnologije"><button class="btn btn-warning" (click)="insert()" style="width: 20%; margin-left:40%">+ UNESI PREDMET</button></a>
