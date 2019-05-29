@@ -67,11 +67,11 @@ deleteRow(id_course): Observable<any> {
 }
 updateRow(id_course, subjects): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.put("https://doolooapp.herokuapp.com/courses" +id_course, subjects, {headers: headers});
+  return this.http.put("https://doolooapp.herokuapp.com/courses/" +id_course, subjects, {headers: headers});
 
 }
 getUpdateById(id_course): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.get("https://doolooapp.herokuapp.com/courses" + id_course );
+  return this.http.get("https://doolooapp.herokuapp.com/courses/" + id_course );
 }
 }
