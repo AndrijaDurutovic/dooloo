@@ -28,7 +28,12 @@ export class InformacioneTehnologijeComponent implements OnInit {
   }
  
  deleteRow(id){
-  this.subject.deleteRow(id).subscribe(res => console.log(res))
+  this.subject.deleteRow(id).subscribe(res => {
+    console.log(res) 
+    this.getInsert()
+  }
+    
+  )
    
  }
 
