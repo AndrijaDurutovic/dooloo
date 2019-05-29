@@ -35,13 +35,14 @@ export class InformacioneUpdateComponent implements OnInit {
   
   }
 
-getByUpdateId(){
-  this.subject.getUpdateById(this.id).subscribe(res =>{
-    console.log(res)
-    this.subjects= res
-  }, err => {
-    console.log(err)
-  })
+  getByUpdateId(){
+    this.subject.getUpdateById(this.id).subscribe(res =>{
+      console.log(res)
+      this.subjects= res
+    }, err => {
+      console.log(err)
+    })
+  
 
 }
 
