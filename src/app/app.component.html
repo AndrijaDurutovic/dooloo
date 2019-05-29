@@ -8,15 +8,13 @@
   
   <div id="navb" class="navbar-collapse collapse hide">
     
-      <a class="navbar-brand" href="#" style="max-width: 3%;">
+      <a class="navbar-brand" href="#" style="width: 3%; position:fixed">
           <img src="https://cdnaws.recis.io/i/img/00/59/25/57_f02ff9.png" class="img-fluid">
        </a>
 
      
 
-    <ul class="navbar-nav">
-       
-    </ul>
+   
 
     <ul class="nav navbar-nav ml-auto">
        
@@ -24,31 +22,33 @@
         <div class="btn-group">
             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Studijski program
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" routerLink="/informacione-tehnologije">Informacione tehnologije</a>
+                 
+                
+                </div>
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/informacione-tehnologije">Informacione tehnologije</a>
-             
-            
-            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Profile
+                      <div class=dropdown-menu>
+                          <a class="dropdown-item" routerLink="/profile">Profile</a>
+                          <a class="dropdown-item" routerLink="/admindashboard">Admindashboard</a>
+                          <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/signup']" routerLinkActive *ngIf="!currentStatus.status">Sign Up</a>
+                        
+                        
+                            <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/login']" routerLinkActive *ngIf="!currentStatus.status">Login</a>
+                     
+                        
+                            <a class="dropdown-item" href="javascript:void(0)" (click)="logout()" *ngIf="currentStatus.status">Logout</a>
+                  
+                       </div>
+                  </button>
           </div>
 
-        <div class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Profile
-              </button>
+        
               
-     <div class=dropdown-menu>
-        <a class="dropdown-item" routerLink="/profile">Profile</a>
-        <a class="dropdown-item" routerLink="/admindashboard">Admindashboard</a>
-        <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/signup']" routerLinkActive *ngIf="!currentStatus.status">Sign Up</a>
-      
-      
-          <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/login']" routerLinkActive *ngIf="!currentStatus.status">Login</a>
-   
-      
-          <a class="dropdown-item" href="javascript:void(0)" (click)="logout()" *ngIf="currentStatus.status">Logout</a>
-
-     </div>
+     
     </div>
     <small class="logovankorisnik">{{userName}}</small>
    
