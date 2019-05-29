@@ -41,5 +41,11 @@
   
   .card{
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(124, 17, 13)
+    color: white;
+    text-align: left
+  }
+ 
+  
+  .card-body{
+    background-color: rgb(17, 23, 56)
   }
