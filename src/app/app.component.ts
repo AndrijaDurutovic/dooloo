@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginAuthService} from './login-auth.service';
 import{Router} from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit{
   userName
   public currentStatus: any;
 
-  constructor(private authService: LoginAuthService, private router: Router){
+  constructor(private authService: LoginAuthService, private router: Router, private toastr: ToastrService){
       this.currentStatus = this.authService.getStatus().subscribe(currentStatus => {
         this.currentStatus = currentStatus;
       })
@@ -24,6 +25,7 @@ console.log(this.userName)
   logout(){
     localStorage.removeItem('currentUser');
     this.router.navigate(['login']);
+    this.toastr.success('Uspesno ste se izlogovali')
 
   }
  
