@@ -18,15 +18,15 @@ td{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: rgb(70, 122, 98);
+    background-color: rgb(36, 37, 37);
     color: white;
   }
     
 
 tr{
-    color:  rgb(7, 125, 141);
+    color:  rgb(43, 43, 43);
     font-family: serif;
     text-align: center
 }
-tr:hover {background-color: rgb(151, 194, 188);}
+tr:hover {background-color: rgb(109, 110, 110);}
 tr:nth-child(even){background-color: #f2f2f2;}

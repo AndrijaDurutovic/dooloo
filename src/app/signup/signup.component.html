@@ -1,66 +1,56 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<div class="container"  style="width: 50%; margin-left:25%;">
-<form #userForm="ngForm"  novalidate>
-  <div class="form-group">
-    <label for="firstName"></label>
-    <input type="text" required #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" placeholder="First name:"  class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName">
-    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">Name is required</small>
-    
-  </div>
-
-  <div class="form-group">
-      <label for="lastName"></label>
-      <input type="text" required #lastName="ngModel" placeholder="Last name:" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName">
-      <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last name is required</small>
+<form>
+ 
+  <label>
+    <p class="label-txt">ENTER YOUR NAME</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
     </div>
-    
-    <div class="form-group">
-        <label for="email"></label>
-        <input type="email" required #email="ngModel" placeholder="Email:" class="form-control" id="email" [(ngModel)]="user.email" name="email">
-        <div *ngIf="email.errors && (email.invalid || email.touched)">
-          <small class="text-danger" *ngIf="email.errors.required">E-mail is required</small>
-          
-
-        </div>
-      </div>
-
-      <div class="form-group">
-          <label for="password"></label>
-          <input type="password" required #password="ngModel" placeholder="Password:" class="form-control" id="password" [(ngModel)]="user.password" name="password">
-          <div *ngIf="password.errors && (password.invalid || password.touched)">
-            <small class="text-danger" *ngIf="password.errors.required">Password is required</small>
-            
-  
-          </div>
-        </div>
-
-        <div class="form-group">
-            <label for="phoneNumber"></label>
-            <input type="tel" required placeholder="Phone Number:" #phoneNumber="ngModel" pattern="^\d{10}$" [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched" class="form-control" id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber">
-            <div *ngIf="phoneNumber.errors && (phoneNumber.invalid || phoneNumber.touched)">
-              <small class="text-danger" *ngIf="phoneNumber.errors.required">Phone number is required</small>
-              <small class="text-danger" *ngIf="phoneNumber.errors.pattern">Number must be 10 digits</small>
-
-            </div>
-          </div>
-
-
-          <div class="form-group">
-              <label for="role"></label>
-              <select type="text" class="form-control" id="role" [(ngModel)]="user.role" name="role">
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR LASTNAME</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR PHONENUMBER</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+  <select type="text" class="form-control" id="role" [(ngModel)]="user.role" name="role">
                   
-                <option value="default">Select Role</option>
-                <option value="ADMIN">Admin</option>
-                <option value="USER" selected>User</option>
-                
-                </select>
-            </div>
-
-                <div class="form-group">
-                  <a href="https://dooloo.herokuapp.com/login"><button type="button" [disabled]="userForm.form.invalid"  class="btn btn-info" (click)="saveUser(user,userForm)" style="width: 50%; margin-left:25%">SignUp</button></a>
-
-                </div>
-
+    <option value="default">Select Role</option>
+    <option value="ADMIN">Admin</option>
+    <option value="USER" selected>User</option>
+    
+    </select>
+  
+  </label>
+  <button type="submit" (click)="saveUser(user,userForm)">submit</button>
 </form>
-</div>
+
+

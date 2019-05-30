@@ -1,6 +1,7 @@
 
 .dropdown-item{
-    color: lightseagreen;
+    color: white;
+    background-color: lightslategray
   
 }
 .logovankorisnik{
@@ -13,7 +14,9 @@
 #nav {
    
     height: 60px;
-    text-align: center
+    text-align: center;
+    
+    
  
 }
 
