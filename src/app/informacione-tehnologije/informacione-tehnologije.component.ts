@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-informacione-tehnologije',
@@ -12,7 +13,7 @@ export class InformacioneTehnologijeComponent implements OnInit {
     public objekat: any = [];
 
 
-  constructor(private subject: UserService, private router: Router) { }
+  constructor(private subject: UserService, private router: Router, private toastr: ToastrService) { }
 
   
 
@@ -31,6 +32,7 @@ export class InformacioneTehnologijeComponent implements OnInit {
   this.subject.deleteRow(id).subscribe(res => {
     console.log(res) 
     this.getInsert()
+    
   }
     
   )

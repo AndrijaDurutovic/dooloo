@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LoginAuthService} from '../login-auth.service';
 import {UserService} from '../user.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class AdmindashboardComponent implements OnInit {
  
 
 
-  constructor(private authService: LoginAuthService, private userService: UserService, private router: Router) 
+  constructor(private authService: LoginAuthService, private userService: UserService, private router: Router, private toastr: ToastrService) 
   { 
     this.authService.isLoggedIn();
     this.loginuser = JSON.parse(localStorage.getItem('currentUser'));
@@ -36,6 +37,12 @@ export class AdmindashboardComponent implements OnInit {
       deleteUser(users){
        this.userService.deleteUser(users).subscribe(res=>{
         console.log('Deleted');
+
+    this.userService.getAllUsers(this.loginuser.token).subscribe(users =>
+      {
+        this.users= users;
+      })
+        this.toastr.success('Uspesno izbrisano');
        })
       
       }
