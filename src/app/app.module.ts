@@ -22,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { InformacioneTehnologijeComponent } from './informacione-tehnologije/informacione-tehnologije.component';
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -37,7 +38,6 @@ import { InformacioneUpdateComponent } from './informacione-update/informacione-
     InformacioneTehnologijeComponent,
     InsertFormaComponent,
     InformacioneUpdateComponent,
-   
   ],
   imports: [
     BrowserModule,
@@ -45,7 +45,8 @@ import { InformacioneUpdateComponent } from './informacione-update/informacione-
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgbModule
 
  
   ],

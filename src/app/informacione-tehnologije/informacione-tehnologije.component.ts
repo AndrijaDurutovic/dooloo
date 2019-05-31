@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-informacione-tehnologije',
@@ -11,9 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 export class InformacioneTehnologijeComponent implements OnInit {
 
     public objekat: any = [];
+    closeResult: string;
 
-
-  constructor(private subject: UserService, private router: Router, private toastr: ToastrService) { }
+      public id //id za modal i delete button, ubacujem ga u deleteRow funkciju i vezan je za id_course
+  constructor(private subject: UserService, private router: Router, private toastr: ToastrService, private modalService: NgbModal) { }
 
   
 
@@ -28,8 +30,8 @@ export class InformacioneTehnologijeComponent implements OnInit {
     
   }
  
- deleteRow(id){
-  this.subject.deleteRow(id).subscribe(res => {
+ deleteRow(){
+  this.subject.deleteRow(this.id).subscribe(res => {
     console.log(res) 
     this.getInsert()
     
@@ -41,6 +43,25 @@ export class InformacioneTehnologijeComponent implements OnInit {
 
 updateRow(id){
   this.router.navigate(['informacione-update', id])
+}
+
+open(content, id) {
+  this.id=id;
+  this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.closeResult = `Closed with: ${result}`;
+  }, (reason) => {
+    this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+  });
+}
+
+private getDismissReason(reason: any): string {
+  if (reason === ModalDismissReasons.ESC) {
+    return 'by pressing ESC';
+  } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+    return 'by clicking on a backdrop';
+  } else {
+    return  `with: ${reason}`;
+  }
 }
 
 

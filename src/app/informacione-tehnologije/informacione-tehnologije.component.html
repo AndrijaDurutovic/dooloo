@@ -45,7 +45,7 @@
       <td>{{subject.semester}}</td>
       <td>{{subject.espb}}</td>
       <td>{{subject.is_mandatory}}</td>
-      <td><button class="btn btn-sm btn-outline-danger" routerLink="/informacione-tehnologije" (click)="deleteRow(subject.id_course)">Delete</button></td> 
+      <td><button type="button" class="btn btn-sm btn-outline-danger" (click) = "open(content, subject.id_course)">Delete</button></td> 
       <td><button class="btn btn-sm btn-outline-info" (click)="updateRow(subject.id_course)">Update</button></td>
   </tr>
 
@@ -57,5 +57,19 @@
 <button id="dugmezaunos" class="btn btn-warning" routerLink="/insert-forma" style="width: 20%; margin-left:40%">UNESI PREDMET</button>
 </div>
 
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title" style="color:red;">Warning!</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     <p>Are you sure you want to perform this action?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close('Save click'); deleteRow()">Delete</button>
+    </div>
+  </ng-template>
 </body>
 </html>
