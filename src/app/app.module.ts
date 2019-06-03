@@ -23,6 +23,7 @@ import { InformacioneTehnologijeComponent } from './informacione-tehnologije/inf
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     InformacioneTehnologijeComponent,
     InsertFormaComponent,
     InformacioneUpdateComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,

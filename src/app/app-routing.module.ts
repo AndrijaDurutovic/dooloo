@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { InformacioneTehnologijeComponent } from './informacione-tehnologije/informacione-tehnologije.component';
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
+import { ChatComponent} from './chat/chat.component';
 
 
 export const routes: Routes = [
@@ -23,9 +24,10 @@ export const routes: Routes = [
 
 {path: 'update/:id', component: UpdateComponent, canActivate: [AuthGuard]},
 {path: 'profile', component: ProfileComponent},
-{path: 'informacione-tehnologije', component: InformacioneTehnologijeComponent},
+{path: 'informacione-tehnologije', component: InformacioneTehnologijeComponent, canActivate: [AuthGuard] },
 {path: 'insert-forma', component: InsertFormaComponent},
 {path: 'informacione-update/:id', component: InformacioneUpdateComponent},
+{path: 'chat', component: ChatComponent},
 
 {path: '**', pathMatch: 'full', redirectTo: 'home'},
 

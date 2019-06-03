@@ -29,6 +29,7 @@ export class UserdashboardComponent implements OnInit {
         this.user= user;
       }, err => {
         console.log(err);
+       
       })
   }
 

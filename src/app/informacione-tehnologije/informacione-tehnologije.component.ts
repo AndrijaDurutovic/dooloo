@@ -3,6 +3,7 @@ import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { LoginAuthService } from '../login-auth.service';
 
 @Component({
   selector: 'app-informacione-tehnologije',
@@ -15,7 +16,11 @@ export class InformacioneTehnologijeComponent implements OnInit {
     closeResult: string;
 
       public id //id za modal i delete button, ubacujem ga u deleteRow funkciju i vezan je za id_course
-  constructor(private subject: UserService, private router: Router, private toastr: ToastrService, private modalService: NgbModal) { }
+  loginuser: any;
+  constructor(private authService: LoginAuthService, private subject: UserService, private router: Router, private toastr: ToastrService, private modalService: NgbModal) { 
+    this.authService.isLoggedIn();
+    this.loginuser = JSON.parse(localStorage.getItem('currentUser'));
+  }
 
   
 

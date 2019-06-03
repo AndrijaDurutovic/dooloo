@@ -28,6 +28,9 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('currentUser', JSON.stringify(response));
             if(response.user.role === 'ADMIN'){
               this.router.navigate(['/admindashboard']);
+              
+
+              
           
             }else{
               this.router.navigate(['/userdashboard']);
@@ -39,6 +42,3 @@ export class LoginComponent implements OnInit {
 
     }
   }
-
-
-
