@@ -8,7 +8,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -18,7 +18,17 @@
 </head>
 <body>
  
- 
+  <script src="https://unpkg.com/@pusher/chatkit-client@1/dist/web/chatkit.js"></script>
+    <script>
+    const tokenProvider = new Chatkit.TokenProvider({
+  url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/6098bcc4-b654-446a-b150-413843609af4/token"
+});
+
+const chatManager = new Chatkit.ChatManager({
+  instanceLocator: "v1:us1:6098bcc4-b654-446a-b150-413843609af4",
+  userId: "Andrija",
+  tokenProvider: tokenProvider
+});</script>
   
   <app-root></app-root>
 </body>

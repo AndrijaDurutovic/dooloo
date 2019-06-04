@@ -26,17 +26,28 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
     "@ng-bootstrap/ng-bootstrap": "^4.2.0",
+    "@pusher/chatkit-client": "^1.5.0",
+    "@pusher/chatkit-server": "^1.1.0",
+    "@stomp/stompjs": "^5.3.0",
     "angular-carousel": "^1.1.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
-    "express": "^4.17.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
     "hammerjs": "^2.0.8",
+    "ng2-stomp-service": "^1.2.2",
     "ngx-toastr": "^10.0.4",
     "path": "^0.12.7",
     "popper.js": "^1.15.0",
     "rxjs": "~6.5.2",
+    "sockjs-client": "^1.3.0",
+    "stompjs": "^2.3.3",
     "tslib": "^1.9.0",
     "typescript": "~3.4.5",
+    "websocket": "^1.0.28",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -55,5 +66,18 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrija995/dooloo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrija995/dooloo/issues"
+  },
+  "homepage": "https://github.com/Andrija995/dooloo#readme"
 }

@@ -10,9 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import {ContactformComponent} from './contactform/contactform.component';
 import {LoginAuthService} from './login-auth.service'
-
 import {FormsModule} from '@angular/forms';
 import {UserService} from './user.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -23,7 +22,7 @@ import { InformacioneTehnologijeComponent } from './informacione-tehnologije/inf
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ChatComponent } from './chat/chat.component';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -39,7 +38,8 @@ import { ChatComponent } from './chat/chat.component';
     InformacioneTehnologijeComponent,
     InsertFormaComponent,
     InformacioneUpdateComponent,
-    ChatComponent,
+    ContactformComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,8 @@ import { ChatComponent } from './chat/chat.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgbModule
+    NgbModule,
+   
 
  
   ],
