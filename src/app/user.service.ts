@@ -74,4 +74,8 @@ getUpdateById(id_course): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
   return this.http.get("https://doolooapp.herokuapp.com/courses/" + id_course );
 }
+contact(contacts): Observable<any> {
+  const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
+  return this.http.post("https://doolooapp.herokuapp.com/contacts", contacts);
+}
 }

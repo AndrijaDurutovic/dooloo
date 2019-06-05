@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-contactform',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactformComponent implements OnInit {
 
-  constructor() { }
+  public contacts: any = {};
+
+  constructor(private toastr: ToastrService, private userService: UserService) { }
 
   ngOnInit() {
   }
+contact( contacts: any ,contactForm:any){
+  contacts.enabled = true;
+  this.userService.contact(this.contacts).subscribe((response) => {
+    if(response){
+      console.log(response);
+      contactForm.reset();
+      this.toastr.success('Uspesno ste nas kontaktirali')
 
+    }
+  })
+
+}
 }
