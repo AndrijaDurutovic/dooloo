@@ -114,7 +114,7 @@ body, html{
 
 .pimg1{
   background-image:url('image1.jpg');
-  min-height:400%;
+  min-height:100%;
 }
 
 .pimg2{
