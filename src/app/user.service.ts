@@ -78,4 +78,7 @@ contact(contacts): Observable<any> {
   const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
   return this.http.post("https://doolooapp.herokuapp.com/contacts", contacts);
 }
+
+
+
 }

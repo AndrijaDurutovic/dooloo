@@ -40,16 +40,9 @@
       <div class="line"></div>
     </div>
   </label>
-  <label>
-  <select type="text" class="form-control" id="role" [(ngModel)]="user.role" name="role">
-                  
-    <option value="default">Select Role</option>
-    <option value="ADMIN">Admin</option>
-    <option value="USER" selected>User</option>
-    
-    </select>
   
-  </label>
+  
+  
   <button type="submit" (click)="saveUser(user,userForm)">Sign Up</button>
 </form>
 

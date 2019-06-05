@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import{Router} from '@angular/router'
 import {LoginAuthService} from '../login-auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -15,14 +16,14 @@ export class LoginComponent implements OnInit {
 
   
 
-  constructor(private userService: UserService, private router: Router, private authService: LoginAuthService) {
+  constructor(private userService: UserService, private router: Router, private authService: LoginAuthService, private toastr: ToastrService) {
     this.authService.isLoggedIn();
    }
 
   ngOnInit() {
   }
     loginUser(user: any){
-      this.userService.loginUser(user).subscribe((response)=>{
+      this.userService.loginUser(user).subscribe(response =>{
         if(response){
           if(response.token){
             localStorage.setItem('currentUser', JSON.stringify(response));
@@ -38,6 +39,9 @@ export class LoginComponent implements OnInit {
           }
           
         }
+      }, 
+      err => {
+      this.toastr.warning(err.error.message);
       })
 
     }
