@@ -1,32 +1,67 @@
-table{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-h2{
-  
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center
-    
-}
-td{
-    border: 1px solid rgb(172, 153, 153);
-    padding: 8px;
-  }
-   
-  th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: rgb(43, 44, 44);
-    color: white;
-  }
-    
 
-tr{
-    color:  rgb(41, 44, 44);
-    font-family: serif;
-    text-align: center
-}
-tr:hover {background-color: rgb(169, 180, 190);}
-tr:nth-child(even){background-color: #f2f2f2;}
+  
+  /* Container */
+  
+  #container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Table */
+  
+  table {
+    background: linear-gradient(180deg, rgb(24, 66, 109), rgb(25, 190, 198));
+    width: 50%;
+    height: 70%;
+    border-collapse: collapse;
+    box-shadow: 5px 5px 20px #38393a;
+    cursor: pointer;
+    border-radius: 25px;
+    overflow:hidden;
+    transition: all 0.5s;
+  }
+  
+  th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 30px;
+  }
+  
+  td {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    color:white
+
+  }
+  
+  #header {
+    background: rgb(24, 95, 175);
+    height: 40px;
+  }
+  
+  /* Hover Effects */
+  
+  th:hover {
+    background: rgb(14, 53, 116);
+  }
+  
+  tr:hover {
+    background: rgba(206, 223, 239, 0.2);
+  }
+  
+  td:hover, .planets:hover {
+    background: rgb(82, 177, 221);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  table:hover {
+    width: 51%;
+    transform: translate(0px,-10px);
+    box-shadow: 15px 15px 66px #38393a;
+  }
+  
