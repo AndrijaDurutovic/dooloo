@@ -9,7 +9,7 @@
 /* Table */
 
 table {
-  background: linear-gradient(180deg, rgb(157, 160, 163), rgb(162, 220, 223));
+  background: linear-gradient(180deg, rgb(43, 52, 71), rgb(187, 195, 196));
   width: 50%;
   height: 70%;
   border-collapse: collapse;
@@ -36,8 +36,8 @@ td {
 }
 
 #header {
-  background: rgb(131, 135, 139);
-  height: 
+  background: rgb(99, 106, 114);
+  height: 50px; 
 }
 
 /* Hover Effects */
