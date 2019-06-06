@@ -9,8 +9,8 @@
 /* Table */
 
 table {
-  background: linear-gradient(180deg, rgb(43, 52, 71), rgb(187, 195, 196));
-  width: 50%;
+  background: linear-gradient(90deg, rgb(103, 146, 231), rgb(94, 99, 100));
+  width: 70%;
   height: 70%;
   border-collapse: collapse;
   box-shadow: 5px 5px 20px #38393a;
@@ -25,13 +25,15 @@ th {
   text-transform: uppercase;
   letter-spacing: 1px;
   height: 30px;
+  width: 80px;
 }
 
 td {
   text-align: center;
   text-transform: uppercase;
   font-size: 15px;
-  color:white
+  color:white;
+  width: 80px;
 
 }
 
