@@ -12,13 +12,14 @@ import { InformacioneTehnologijeComponent } from './informacione-tehnologije/inf
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
 import {ContactformComponent} from './contactform/contactform.component';
+import { AdminGuard } from './admin.guard';
 
 export const routes: Routes = [
 {path: 'home', component: HomeComponent},
 {path: 'signup', component: SignupComponent},
 {path: 'login', component: LoginComponent},
 {path: 'contact', component: ContactformComponent},
-{path: 'admindashboard', component: AdmindashboardComponent, canActivate: [AuthGuard] },
+{path: 'admindashboard', component: AdmindashboardComponent, canActivate: [AuthGuard, AdminGuard] },
 {path: 'userdashboard', component: UserdashboardComponent, canActivate: [AuthGuard]},
 {path: 'update/:id', component: UpdateComponent, canActivate: [AuthGuard]},
 {path: 'profile', component: ProfileComponent},

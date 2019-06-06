@@ -22,7 +22,9 @@ import { InformacioneTehnologijeComponent } from './informacione-tehnologije/inf
 import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgxPermissionsModule } from 'ngx-permissions';
 import { from } from 'rxjs';
+import { AdminGuard } from './admin.guard';
 
 
 @NgModule({
@@ -49,13 +51,14 @@ import { from } from 'rxjs';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgbModule,
+    NgxPermissionsModule
    
 
  
   ],
   providers: [
     UserService,
-    AuthGuard,
+    AuthGuard, AdminGuard,
     LoginAuthService
   ],
   bootstrap: [AppComponent]

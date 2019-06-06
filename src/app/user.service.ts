@@ -13,6 +13,9 @@ export class UserService {
   constructor(private http: HttpClient) {
     this.http = http;
   }
+  getLocalStorageUser(){
+    return localStorage.getItem('currentUser')
+  }
   saveUser(user: any): Observable<any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
     return this.http.post("https://doolooapp.herokuapp.com/registration", user);
