@@ -14,7 +14,7 @@
      <th>Phone</th> 
      <th>Role</th>
    </tr>
-   <tr>
+   <tr *ngFor="let user of users">
      <th class="planets" style="text-align:center">
        {{user.firstName}}</th>
      <td style="text-align:center">{{user.lastName}}</td>
