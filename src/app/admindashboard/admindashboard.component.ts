@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AdmindashboardComponent implements OnInit {
 
-  public loading = false;
+ 
  
 
   public loginuser: any = {};
@@ -31,12 +31,12 @@ export class AdmindashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loading=true;
+   
     this.userService.getAllUsers(this.loginuser.token).subscribe(users =>
     {
       this.users= users;
     })
-    this.loading=false;
+  
   }
       deleteUser(users){
        this.userService.deleteUser(users).subscribe(res=>{
