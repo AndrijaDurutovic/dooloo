@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../user.service';
+import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-contactform',
@@ -14,6 +15,7 @@ export class ContactformComponent implements OnInit {
   constructor(private toastr: ToastrService, private userService: UserService) { }
 
   ngOnInit() {
+   
   }
 contact( contacts: any ,contactForm:any){
   contacts.enabled = true;
@@ -27,4 +29,5 @@ contact( contacts: any ,contactForm:any){
   })
 
 }
+
 }

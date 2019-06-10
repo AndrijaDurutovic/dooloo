@@ -25,6 +25,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { from } from 'rxjs';
 import { AdminGuard } from './admin.guard';
+import { ContactviewComponent } from './contactview/contactview.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AdminGuard } from './admin.guard';
     InformacioneTehnologijeComponent,
     InsertFormaComponent,
     InformacioneUpdateComponent,
-    ContactformComponent
+    ContactformComponent,
+    ContactviewComponent,
    
   ],
   imports: [

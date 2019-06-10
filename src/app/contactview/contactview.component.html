@@ -1,0 +1,46 @@
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+
+   
+    
+        
+            
+            
+         
+
+             
+                    <table class="table table-hover table-email">
+                        <tbody>
+                        <tr class="unread selected" *ngFor="let contacts of contacts ">
+                            <td>
+                                <div class="ckbox ckbox-theme">
+                                    <input id="checkbox1" type="checkbox" checked="checked" class="mail-checkbox">
+                                    <label for="checkbox1"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="http://localhost:4200/contactview" class="star star-checked"><i class="fa fa-star"></i></a>
+                            </td>
+                            <td>
+                                <div class="media">
+                                    <a href="http://localhost:4200/contactview"  class="pull-left">
+                                        <img alt="..." src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Dkc_8zbLasfQDRjE-6db4C08ngr3eM4myiSuz-aZj_-BdD_P" class="media-object">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4>User: <br>{{contacts.contact_name}}</h4>
+                                        <p class="email-summary"><strong>E-mail:<br></strong>{{contacts.contact_mail}}</p>
+                                        <span class="media-meta"><u>Message:</u><br>{{contacts.message}}</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+
+        
+    
+

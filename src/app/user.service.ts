@@ -60,7 +60,7 @@ export class UserService {
   }
   getInsert(): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-    return this.http.get("https://doolooapp.herokuapp.com/courses/",);
+    return this.http.get("https://doolooapp.herokuapp.com/courses/");
 }
 
 deleteRow(id_course): Observable<any> {
@@ -82,6 +82,10 @@ contact(contacts): Observable<any> {
   return this.http.post("https://doolooapp.herokuapp.com/contacts", contacts);
 }
 
+getAllContacts(contacts): Observable<any> {
+  const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
+  return this.http.get("https://doolooapp.herokuapp.com/contacts/", contacts);
 
+}
 
 }

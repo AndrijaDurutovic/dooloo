@@ -13,8 +13,12 @@ import { InsertFormaComponent } from './insert-forma/insert-forma.component';
 import { InformacioneUpdateComponent } from './informacione-update/informacione-update.component';
 import {ContactformComponent} from './contactform/contactform.component';
 import { AdminGuard } from './admin.guard';
+import {ContactviewComponent} from './contactview/contactview.component';
 
-export const routes: Routes = [
+
+
+
+  export const routes: Routes = [
 {path: 'home', component: HomeComponent},
 {path: 'signup', component: SignupComponent},
 {path: 'login', component: LoginComponent},
@@ -26,7 +30,7 @@ export const routes: Routes = [
 {path: 'informacione-tehnologije', component: InformacioneTehnologijeComponent, canActivate: [AuthGuard] },
 {path: 'insert-forma', component: InsertFormaComponent},
 {path: 'informacione-update/:id', component: InformacioneUpdateComponent},
-
+{path: 'contactview', component: ContactviewComponent},
 {path: '**', pathMatch: 'full', redirectTo: 'home'},
 
 ];
