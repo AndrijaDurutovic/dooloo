@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public loading = false;
 
   public user: any = {};
 
@@ -22,27 +23,32 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-    loginUser(user: any){
+    loginUser(user: any){ 
+      this.loading=true;
       this.userService.loginUser(user).subscribe(response =>{
         if(response){
           if(response.token){
             localStorage.setItem('currentUser', JSON.stringify(response));
             if(response.user.role === 'ADMIN'){
+              this.loading=false;
               this.router.navigate(['/admindashboard']);
               
 
               
           
             }else{
+              
               this.router.navigate(['/userdashboard']);
             }
           }
           
         }
       }, 
-      err => {
+      err => { 
+        this.loading=false;
       this.toastr.warning(err.error.message);
       })
 
     }
+
   }

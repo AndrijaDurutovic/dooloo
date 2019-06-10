@@ -76,3 +76,11 @@ button:hover {
   background: #8BC34A;
   color: #ffffff;
 }
+#loader{
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  margin: -50px 0px 0px -50px;
+  
+}
+

@@ -9,6 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  showActions
   title = 'spring-security';
   userName
   public currentStatus: any;
@@ -21,6 +22,10 @@ export class AppComponent implements OnInit{
   ngOnInit(){
 this.userName=JSON.parse(localStorage.getItem('currentUser')).user.firstName
 console.log(this.userName)
+
+this.showActions = JSON.parse(localStorage.getItem('currentUser')).user.role
+console.log(this.showActions)
+
   }
   logout(){
     localStorage.removeItem('currentUser');

@@ -64,3 +64,10 @@ table:hover {
   transform: translate(0px,-10px);
   box-shadow: 15px 15px 66px #38393a;
 }
+#loader{
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  margin: -50px 0px 0px -50px;
+  
+}

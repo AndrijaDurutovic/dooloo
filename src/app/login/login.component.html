@@ -1,6 +1,6 @@
 
   
-    <form #userForm="ngForm">
+    <form #userForm="ngForm" *ngIf="!loading">
     <label>
       <p class="label-txt">ENTER YOUR EMAIL</p>
       <input type="text" class="input" [(ngModel)]="user.email" name="email">
@@ -8,7 +8,7 @@
         <div class="line"></div>
       </div>
     </label>
-
+      
 
     <label>
       <p class="label-txt">ENTER YOUR PASSWORD</p>
@@ -20,4 +20,6 @@
     
     <button type="submit" (click)="loginUser(user)">Login</button>
 </form>
-   
+   <div id="loader" *ngIf="loading">
+     <img src="../../assets/spinner.gif" style="height:300px;width:500px">
+   </div>
