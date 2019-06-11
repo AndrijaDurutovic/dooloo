@@ -9,7 +9,7 @@
 /* Table */
 
 table {
-  background:rgb(24, 66, 109);
+  background:rgb(49, 51, 53);
   width: 100%;
   height: 70%;
   border-collapse: collapse;
@@ -63,4 +63,7 @@ table:hover {
 }
 h4{
   text-align: center;
+}
+.kontakti{
+  margin-top: 50px;
 }

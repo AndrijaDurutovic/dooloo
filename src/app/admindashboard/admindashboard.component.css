@@ -10,7 +10,7 @@
 /* Table */
 
 table {
-  background: linear-gradient(90deg, rgb(103, 146, 231), rgb(94, 99, 100));
+  background: linear-gradient(120deg, rgb(0, 0, 0), rgb(46, 49, 49));
   width: 100%;
   height: 70%;
   border-collapse: collapse;
@@ -39,7 +39,7 @@ td {
 }
 
 #header {
-  background: rgb(99, 106, 114);
+  background: rgb(1, 2, 2);
   height: 50px; 
 }
 
@@ -60,7 +60,7 @@ td:hover, .planets:hover {
 }
 
 table:hover {
-  width: 51%;
+  width: 95%;
   transform: translate(0px,-10px);
   box-shadow: 15px 15px 66px #38393a;
 }
