@@ -7,21 +7,24 @@
  
   <label>
     <p class="label-txt">ENTER YOUR NAME</p>
-    <input type="text" class="input" [(ngModel)]="user.firstName" name="firstName">
+    <input type="text" class="input" required #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" [(ngModel)]="user.firstName" name="firstName">
+    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">Name is required</small>
     <div class="line-box">
       <div class="line"></div>
     </div>
   </label>
   <label>
     <p class="label-txt">ENTER YOUR LASTNAME</p>
-    <input type="text" class="input" [(ngModel)]="user.lastName" name="lastName">
+    <input type="text" required #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" class="input" [(ngModel)]="user.lastName" name="lastName">
+    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last name is required</small>
     <div class="line-box">
       <div class="line"></div>
     </div>
   </label>
   <label>
     <p class="label-txt">ENTER YOUR EMAIL</p>
-    <input type="text" class="input" [(ngModel)]="user.email" name="email">
+    <input type="text" required #email="ngModel"[class.is.invalid]="email.invalid && email.touched" class="input" [(ngModel)]="user.email" name="email">
+    <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
     <div class="line-box">
       <div class="line"></div>
     </div>
@@ -39,6 +42,10 @@
     <div class="line-box">
       <div class="line"></div>
     </div>
+  </label>
+  <label id="uploadid"> Select profile picture
+      <input type="file" (change)="onFileSelected($event)">
+    <button type="button" id="uppl"  button class="btn-primary" (click)="onUpload()">Upload</button>
   </label>
   <label for="role"></label>
   <select type="text" class="form-control" id="role" [(ngModel)]="user.role" name="role">

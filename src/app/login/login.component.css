@@ -4,7 +4,7 @@ body {
 form {
   width: 60%;
   margin: 60px auto;
-  background: #efefef;
+  background: #201c1c;
   padding: 60px 120px 80px 120px;
   text-align: center;
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
@@ -26,11 +26,12 @@ label {
   transition: ease .3s;
 }
 .input {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   background: transparent;
   border: none;
   outline: none;
+  color: whitesmoke
 }
 
 .line-box {
@@ -47,12 +48,12 @@ label {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
-  background: #8BC34A;
+  background: rgb(238, 58, 52);
   transition: ease .6s;
 }
 
 .input:focus + .line-box .line {
-  width: 60%;
+  width: 100%;
 }
 
 .label-active {
@@ -70,21 +71,11 @@ button {
   border-radius: 3px;
   cursor: pointer;
   transition: ease .3s;
+  margin-top: 20px;
 }
 
 button:hover {
-  background: #8BC34A;
+  background: rgb(238, 58, 52);
   color: #ffffff;
-}
-#loader{
-  position: fixed;
-  top: 30%;
-  left: 40%;
-  margin: -50px 0px 0px -50px;
   
-}
-
-.fb {
-  background-color: #3B5998;
-  color: white;
 }

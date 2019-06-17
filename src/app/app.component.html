@@ -44,7 +44,6 @@
                           <a class="dropdown-item" routerLink="/admindashboard">Admindashboard</a>
                           <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/signup']" routerLinkActive *ngIf="!currentStatus.status">Sign Up</a>
                         
-                        
                             <a class="dropdown-item" href="javascript:void(0)" [routerLink]="['/login']" routerLinkActive *ngIf="!currentStatus.status">Login</a>
                      
                         
@@ -54,11 +53,17 @@
                   </button>
           </div>
 
-        
+
               
+      
      
     </div>
     <small class="logovankorisnik">{{userName}}</small>
+    <img src="{{profilePicPath}}" style="width:30px; height:30px">
+
+    
+    
+  
    
 
      

@@ -18,73 +18,73 @@ export class UserService {
   }
   saveUser(user: any): Observable<any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
-    return this.http.post("https://doolooapp.herokuapp.com/registration", user);
+    return this.http.post("http://192.168.0.9:8080/registration", user);
 
   }
   loginUser(user: any): Observable<any> {
     const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
-    return this.http.post("https://doolooapp.herokuapp.com/login", user);
+    return this.http.post("http://192.168.0.9:8080/login", user);
 
   }
   getAllUsers(token: any): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' + token });
-    return this.http.get("https://doolooapp.herokuapp.com/users", { headers: headers });
+    return this.http.get("http://192.168.0.9:8080/users", { headers: headers });
 
   }
 
   getUser(token: any, ): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' + token });
-    return this.http.get("https://doolooapp.herokuapp.com/getuser" , { headers: headers });
+    return this.http.get("http://192.168.0.9:8080/getuser" , { headers: headers });
 
   }
 
   deleteUser(user: any) {
     const headers = new HttpHeaders ({'Access-Control-Allow-Origin': '*'});
-    return this.http.delete("https://doolooapp.herokuapp.com/users/" +user);
+    return this.http.delete("http://192.168.0.9:8080/users/" +user);
    
   }
   updateUser(id, user) {
     const headers = new HttpHeaders ({'Access-Control-Allow-Origin': '*'});
-    return this.http.put("https://doolooapp.herokuapp.com/users/" +id, user);
+    return this.http.put("http://192.168.0.9:8080/users/" +id, user);
    
   }
   getUserById(token, id): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' + token });
-    return this.http.get("https://doolooapp.herokuapp.com/users/" +id , { headers: headers });
+    return this.http.get("http://192.168.0.9:8080/users/" +id , { headers: headers });
 
   }
 
   insert(subject): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-    return this.http.post("https://doolooapp.herokuapp.com/courses/", subject );
+    return this.http.post("http://192.168.0.9:8080/courses/", subject );
   }
   getInsert(): Observable<any> {
     const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-    return this.http.get("https://doolooapp.herokuapp.com/courses/");
+    return this.http.get("http://192.168.0.9:8080/courses/");
 }
 
 deleteRow(id_course): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.delete("https://doolooapp.herokuapp.com/courses/" +id_course);
+  return this.http.delete("http://192.168.0.9:8080/courses/" +id_course);
 
 }
 updateRow(id_course, subjects): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.put("https://doolooapp.herokuapp.com/courses/" +id_course, subjects, {headers: headers});
+  return this.http.put("http://192.168.0.9:8080/courses/" +id_course, subjects, {headers: headers});
 
 }
 getUpdateById(id_course): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.get("https://doolooapp.herokuapp.com/courses/" + id_course );
+  return this.http.get("http://192.168.0.9:8080/courses/" + id_course );
 }
 contact(contacts): Observable<any> {
   const headers = new HttpHeaders({ 'Access-Control-Allow-Origin': '*' });
-  return this.http.post("https://doolooapp.herokuapp.com/contacts", contacts);
+  return this.http.post("http://192.168.0.9:8080/contacts", contacts);
 }
 
 getAllContacts(contacts): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.get("https://doolooapp.herokuapp.com/contacts/", contacts);
+  return this.http.get("http://192.168.0.9:8080/contacts/", contacts);
 
 }
 

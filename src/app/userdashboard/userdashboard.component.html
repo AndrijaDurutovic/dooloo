@@ -13,6 +13,8 @@
      <th>Email</th>
      <th>Phone</th> 
      <th>Role</th>
+     <th>Profile picture</th>
+
    </tr>
    <tr>
      <th class="planets" style="text-align:center">
@@ -21,7 +23,8 @@
      <td style="text-align:center">{{user.email}}</td>
      <td style="text-align:center">{{user.phoneNumber}}</td>
      <td style="text-align:center">{{user.role}}</td>
-   </tr>
+     <td><img src="{{user.profilePicPath}}" style="width:100px; height:100px"></td>
+       </tr>
   
  </table>
 </div>
