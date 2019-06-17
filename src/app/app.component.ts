@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   title = 'spring-security';
   userName
   public currentStatus: any;
+  profilePicPath: any;
 
   constructor(private authService: LoginAuthService, private router: Router, private toastr: ToastrService){
       this.currentStatus = this.authService.getStatus().subscribe(currentStatus => {
