@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
+  public loading = false;
   selectedFile: File 
   public slika: any 
 
@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
   saveUser(user:any, userForm: any,){
-   
+    this.loading = true;
     user.enabled = true;
     this.userService.saveUser(user).subscribe((response) => {
       if(response){
@@ -48,6 +48,11 @@ export class SignupComponent implements OnInit {
     'Dobrodosli')}
    
     )
+    err => { 
+      this.loading=false;
+    this.toastr.warning(err.error.message);
+    }
+    
   }
   onFileSelected(event){
     console.log(event);

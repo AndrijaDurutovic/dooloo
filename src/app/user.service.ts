@@ -84,7 +84,7 @@ contact(contacts): Observable<any> {
 
 getAllContacts(contacts): Observable<any> {
   const headers = new HttpHeaders({ 'Authorization': 'Bearer ' });
-  return this.http.get("https://doolooapp.herokuapp.comcontacts/", contacts);
+  return this.http.get("https://doolooapp.herokuapp.com/contacts/", contacts);
 
 }
 
