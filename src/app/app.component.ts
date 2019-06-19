@@ -9,21 +9,11 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
-  public user: any = {
-    firstName: null,
-    lastName: null,
-    email:null,
-    phone:null,
-    role:null,
-  profilePicPath: null
-  };
-
   showActions
   title = 'spring-security';
   userName
   public currentStatus: any;
- 
+  profilePicPath: any;
 
   constructor(private authService: LoginAuthService, private router: Router, private toastr: ToastrService){
       this.currentStatus = this.authService.getStatus().subscribe(currentStatus => {

@@ -60,3 +60,8 @@
     transform: translate(0px,-10px);
     box-shadow: 15px 15px 66px #38393a;
   }
+  img {
+    width:100px;
+    height:100px;
+    background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
+  }

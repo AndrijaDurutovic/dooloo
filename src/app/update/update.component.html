@@ -40,6 +40,10 @@
       <div class="line"></div>
     </div>
   </label>
+  <label id="uploadid"> Select profile picture
+    <input type="file" (change)="onFileSelected($event)">
+  <button type="button" id="uppl"  button class="btn-primary" (click)="onUpload()">Upload</button>
+</label>
   <label>
   <select type="text" class="form-control" id="role" [(ngModel)]="user.role" name="role">
                   

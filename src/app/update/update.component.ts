@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-update',
@@ -9,19 +10,21 @@ import { UserService } from '../user.service';
 })
 export class UpdateComponent implements OnInit {
 
+  selectedFile: File 
+
   public id;
-  public user={
+  public user: any = {
     firstName: null,
     lastName: null,
-    password: null,
-    email: null,
-    phoneNumber: null,
-    role: null
-  }
+    email:null,
+    phone:null,
+    role:null,
+  profilePicPath: null
+  };
 public token 
   
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private router: Router) { 
+  constructor(private route: ActivatedRoute, private userService: UserService, private router: Router, private http: HttpClient) { 
 
   }
 
@@ -56,7 +59,21 @@ getUserById(){
     })
 
 }
+onFileSelected(event){
+  console.log(event);
+  this.selectedFile=<File>event.target.files[0];
+}
+onUpload(){
+  const fd = new FormData();
+  fd.append('image', this.selectedFile, this.selectedFile.name);
+  this.http.post('https://us-central1-imageupload-2fc33.cloudfunctions.net/uploadFile', fd )
+  .subscribe(res=>{
+    console.log('Url slike:' ,res);
+    this.user.profilePicPath=res
+    this.user.profilePicPath=this.user.profilePicPath.message
 
+  });
+}
     
 
 }

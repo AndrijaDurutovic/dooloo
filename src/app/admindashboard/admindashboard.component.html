@@ -1,46 +1,6 @@
+<div class="container-fluid">
+  <ng2-smart-table [settings]="settings" [source]="users" (custom) = "custom($event)"></ng2-smart-table>
 
-  
-
-
-<div class="container-fluid" >
-             
-    <div id="container">
-        <table >
- 
-      <tr id="header" style="
-      margin: 0;
-      padding: 0;
-      font-family: Arial;
-      font-size: 14px;
-      color: #eff0f2;
-      text-align: center
-    ">
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Role</th>
-        <th>Profile Picture</th>
-        <th>Brisanje</th>
-        <th>Izmena</th>
-        
-      
-      </tr>
-
-      <tr *ngFor="let user of users">
-          <th class="planets" style="color: aliceblue">
-              {{user.firstName}}</th>
-            <td style="text-align:center">{{user.lastName}}</td>
-            <td style="text-align:center">{{user.email}}</td>
-            <td style="text-align:center">{{user.phoneNumber}}</td>
-            <td style="text-align:center">{{user.role}}</td>
-            <td><img src="{{user.profilePicPath}}" style="width:100px; height:100px"></td>
-        <td><button class="btn btn-sm btn-outline-danger" (click)="deleteUser(user.id)">Delete</button></td> 
-        <td><button class="btn btn-sm btn-outline-info" (click)="updateUser(user.id)">Update</button></td> 
-      </tr>
-      
-
-  </table>
 </div>
 
 

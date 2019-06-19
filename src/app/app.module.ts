@@ -25,6 +25,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { from } from 'rxjs';
 import { AdminGuard } from './admin.guard';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 import { ContactviewComponent } from './contactview/contactview.component';
 
 
@@ -43,6 +45,7 @@ import { ContactviewComponent } from './contactview/contactview.component';
     InformacioneUpdateComponent,
     ContactformComponent,
     ContactviewComponent,
+    
    
   ],
   imports: [
@@ -53,7 +56,8 @@ import { ContactviewComponent } from './contactview/contactview.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgbModule,
-    NgxPermissionsModule
+    NgxPermissionsModule,
+    Ng2SmartTableModule,
    
 
  
