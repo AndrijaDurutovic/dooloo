@@ -1,7 +1,7 @@
 :host /deep/ ng2-smart-table table {
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;
   height: 350px;
-  background: linear-gradient(90deg, rgb(2, 62, 105), rgb(9, 41, 63));
+  background: linear-gradient(120deg, rgb(7, 40, 61), rgb(5, 100, 92));
   width: 100%;
   height: 70%;
   border-collapse: collapse;
@@ -27,7 +27,8 @@
   padding: .375em .75em;
   color: rgb(2, 2, 2);
   text-align:center;
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid rgb(255, 255, 255) !important;
+  border-top: 1px solid rgb(255, 255, 255) !important;
   color: rgb(2, 2, 2);
   text-align:center;
   text-transform: uppercase;
@@ -35,13 +36,9 @@
   color:white;
 }
 
-:host /deep/ ng2-smart-row > td {
-  border-bottom: 1px solid black !important;
-}
 
-:host /deep/ ng2-smart-table_cell {
-  border-bottom: 1px solid red !important;
-}
+
+
 
 :host /deep/ ng2-smart-table tbody > tr > td > a {
   color: grey;
@@ -57,9 +54,11 @@
   font-weight: bold;
 }
 
-/deep/ body > app-root > app-admindashboard > div > ng2-smart-table > table > thead > tr.ng2-smart-titles > th.ng2-smart-th > ng2-st-column-title > div > ng2-smart-table-title > a {
+:host /deep/ body > app-root > app-admindashboard > div > ng2-smart-table > table > thead > tr.ng2-smart-titles > th.ng2-smart-th > ng2-st-column-title > div > ng2-smart-table-title > a {
   color:white;
 }
+
+
 
 /* clickable paging number */
 :host /deep/ a.ng2-smart-page-link.page-link {
