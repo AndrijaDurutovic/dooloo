@@ -1,6 +1,14 @@
-<div class="container-fluid">
-  <ng2-smart-table [settings]="settings" [source]="users" (custom) = "custom($event)"></ng2-smart-table>
-
-</div>
-
-
+<div>
+    <flx-ui-datatable 
+    [headers]="['Firstname','Lastname', 'Email', 'Phone', 'Role' ]"
+    [dataKeys]="['firstName', 'lastName', 'email', 'phoneNumber', 'role' ]"
+    [dataUrl]="'https://doolooapp.herokuapp.com/users'"
+    [limit]="5"
+    spinnerSrc="http://www.bafcn.com/ajax-loader.gif"
+    [hasActionButtons]="true"
+    (firstActionButtonClicked)="firstButtonClicked($event)"
+    (secondActionButtonClicked)="secondButtonClicked($event)"
+    [embedPictures]="{index:5, rootFolder:'https://doolooapp.herokuapp.com/users'}"
+    [actionButtons]="[{text: 'Edit',tooltip:'updateUser',class:'btn-secondary',icon:'fa fa-edit' }, {text:'Delete',class:'btn-danger', icon:'fa fa-trash', iconPosition:'right' }]" >
+    </flx-ui-datatable>
+    </div>

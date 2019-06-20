@@ -14,6 +14,7 @@ import { InformacioneUpdateComponent } from './informacione-update/informacione-
 import {ContactformComponent} from './contactform/contactform.component';
 import { AdminGuard } from './admin.guard';
 import {ContactviewComponent} from './contactview/contactview.component';
+import { from } from 'rxjs';
 
 
 

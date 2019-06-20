@@ -26,7 +26,7 @@ import { NgxPermissionsModule } from 'ngx-permissions';
 import { from } from 'rxjs';
 import { AdminGuard } from './admin.guard';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-
+import {FlxUiDatatableModule, FlxUiDataTable} from 'flx-ui-datatable';
 import { ContactviewComponent } from './contactview/contactview.component';
 
 
@@ -58,6 +58,8 @@ import { ContactviewComponent } from './contactview/contactview.component';
     NgbModule,
     NgxPermissionsModule,
     Ng2SmartTableModule,
+    FlxUiDatatableModule,
+    
    
 
  
@@ -65,7 +67,8 @@ import { ContactviewComponent } from './contactview/contactview.component';
   providers: [
     UserService,
     AuthGuard, AdminGuard,
-    LoginAuthService
+    LoginAuthService, 
+    FlxUiDataTable,
   ],
   bootstrap: [AppComponent]
 })
