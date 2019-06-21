@@ -52,7 +52,7 @@ table{
   /* Hover Effects */
   
   th:hover {
-    background: rgb(14, 53, 116);
+    background: rgb(74, 81, 92);
   }
   
   tr:hover {
@@ -60,7 +60,7 @@ table{
   }
   
   td:hover, .planets:hover {
-    background: rgb(82, 177, 221);
+    background: rgb(76, 79, 80);
     font-size: 18px;
     font-weight: bold;
   }

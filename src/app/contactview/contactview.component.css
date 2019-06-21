@@ -11,7 +11,7 @@
 table {
   background:rgb(49, 51, 53);
   width: 100%;
-  height: 70%;
+  height: 60%;
   border-collapse: collapse;
   box-shadow: 5px 5px 20px #38393a;
   cursor: pointer;
@@ -51,7 +51,7 @@ tr:hover {
 }
 
 td:hover, .planets:hover {
-  background: rgb(82, 177, 221);
+  background: rgb(67, 71, 73);
   font-size: 18px;
   font-weight: bold;
 }
