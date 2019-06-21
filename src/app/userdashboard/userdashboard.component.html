@@ -1,42 +1,39 @@
 
 
-<div class="container">
-	<div class="row">
-		<div class="col-xl-12">
+<body class="profile-page">
+   
+    
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('https://lapuertorriquena.com/wp-content/themes/options/images/skins/headers/full_width/header-midnightBlue.jpg');"></div>
+    <div class="main main-raised">
+		<div class="profile-content">
+            <div class="container">
+                <div class="row">
+	                <div class="col-md-4 ml-auto mr-auto">
+        	           <div class="profile">
+	                        <div class="avatar">
+	                            <img src="{{user.profilePicPath}}" alt="Circle Image" class="img-raised">
+	                        </div>
+	                        <div class="name">
+	                            <h3 class="title">{{user.firstName}} {{user.lastName}}</h3>
+                                <h6>E-mail: {{user.email}}</h6>
+                                <h6>Phone number: {{user.phoneNumber}}</h6>
+                                <h6>Role: {{user.role}}</h6>
+                               
+								<a class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                                <a class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                                <a class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+	                        </div>
+	                    </div>
+    	            </div>
+                </div>
+                
+				
+        
 
-            <div class="card hovercard">
-                <div class="cardheader">
-
-                </div>
-                <div class="avatar">
-               <img src="{{user.profilePicPath}}" style="width:200px; height:200px">
-                </div>
-                <div class="info">
-                    <div class="title">
-                        <a target="_blank">{{user.firstName}}</a><hr>
-                    </div>
-                    <div class="desc">{{user.lastName}}</div>
-                    <div class="desc">E-mail: {{user.email}}</div>
-                    <div class="desc">Phone number: {{user.phoneNumber}}</div>
-                    <div class="desc"> Role: {{user.role}}</div>
-                </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://plus.google.com">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                   
-                </div>
+        
             </div>
-
         </div>
-
 	</div>
-</div>
+	
+	
+</body>
