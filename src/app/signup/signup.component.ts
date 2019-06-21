@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
     lastName: null,
     email:null,
     phone:null,
-    role:null,
+    role:'USER',
   profilePicPath: null
   };
 
@@ -62,6 +62,7 @@ export class SignupComponent implements OnInit {
       console.log('Url slike:' ,res);
       this.user.profilePicPath=res
       this.user.profilePicPath=this.user.profilePicPath.message
+      this.toastr.success('Slika uspesno uploadovana')
 
     });
   }

@@ -1,30 +1,42 @@
-<div id="container">
-  <table>
-   <tr id="header" style="
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-    font-size: 14px;
-    color: #eff0f2;
-    text-align: center
-  ">
-     <th>First Name</th>
-     <th>Last name</th>
-     <th>Email</th>
-     <th>Phone</th> 
-     <th>Role</th>
-     <th>Profile picture</th>
 
-   </tr>
-   <tr>
-     <th class="planets" style="text-align:center">
-       {{user.firstName}}</th>
-     <td style="text-align:center">{{user.lastName}}</td>
-     <td style="text-align:center">{{user.email}}</td>
-     <td style="text-align:center">{{user.phoneNumber}}</td>
-     <td style="text-align:center">{{user.role}}</td>
-     <td><img src="{{user.profilePicPath}}" style="width:100px; height:100px"></td>
-       </tr>
-  
- </table>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xl-12">
+
+            <div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+                <div class="avatar">
+               <img src="{{user.profilePicPath}}" style="width:200px; height:200px">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank">{{user.firstName}}</a><hr>
+                    </div>
+                    <div class="desc">{{user.lastName}}</div>
+                    <div class="desc">E-mail: {{user.email}}</div>
+                    <div class="desc">Phone number: {{user.phoneNumber}}</div>
+                    <div class="desc"> Role: {{user.role}}</div>
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                   
+                </div>
+            </div>
+
+        </div>
+
+	</div>
 </div>

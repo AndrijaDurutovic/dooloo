@@ -64,26 +64,10 @@
   
   }
 
-  .carousel{
-    background: #ffffff;
-    margin-top: 50px;
-}
-.carousel-item{
-    text-align: center;
-    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-}
-.bs-example{
-  margin: 5px;
-}
+ 
+ 
+ 
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  height: 70px;
-  width: 40px;
- 
-  background-color: rgba(139, 138, 138, 0.3);
- 
- 
-}
 .fa-flickr {
   background: #e6bd4e;
   color: white;
@@ -91,7 +75,7 @@
 body, html{
   height:100%;
   margin:0;
-  font-size:16px;
+  font-size:18px;
   font-family:"Lato", sans-serif;
   font-weight:400;
   line-height:1.8em;
