@@ -49,8 +49,8 @@
       <td>{{subject.semester}}</td>
       <td>{{subject.espb}}</td>
       <td>{{subject.is_mandatory}}</td>
-      <td *ngIf="showActions == 'ADMIN'"><button type="button" class="btn btn-sm btn-outline-danger" (click) = "open(content, subject.id_course)">Izbrisi</button></td> 
-      <td *ngIf="showActions == 'ADMIN'"><button class="btn btn-sm btn-outline-warning" (click)="updateRow(subject.id_course)">Izmeni</button></td>
+      <td *ngIf="showActions == 'ADMIN'"><button type="button" class="btn btn-sm btn-outline-danger" (click) = "open(content, subject.id_course)" style="width:100%">Izbrisi</button></td> 
+      <td *ngIf="showActions == 'ADMIN'"><button class="btn btn-sm btn-outline-warning" (click)="updateRow(subject.id_course)"style="width:100%">Izmeni</button></td>
       
   </tr>
 

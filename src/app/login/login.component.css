@@ -2,7 +2,7 @@ body {
   background: #C5E1A5;
 }
 form {
-  width: 60%;
+  width: 50%;
   margin: 60px auto;
   background: #201c1c;
   padding: 60px 120px 80px 120px;
@@ -24,6 +24,7 @@ label {
   letter-spacing: 1px;
   color: rgb(120,120,120);
   transition: ease .3s;
+ 
 }
 .input {
   width: 100%;

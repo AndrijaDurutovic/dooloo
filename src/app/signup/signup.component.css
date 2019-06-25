@@ -1,35 +1,37 @@
-
+  
 body {
   background: #C5E1A5;
 }
 form {
-  width: 50%;
+  width: 90%;
   margin: 60px auto;
   background: #201c1c;
   padding: 60px 120px 80px 120px;
   text-align: center;
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
   box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-  height:50%
+  height:30%
 }
 label {
   display: block;
   position: relative;
   margin: 40px 0px;
+  width:100%;
 }
 .label-txt {
   position: absolute;
-  top: -1.6em;
+  top: -1.4em;
   padding: 10px;
   font-family: sans-serif;
-  font-size: .8em;
+  font-size: .7em;
   letter-spacing: 1px;
   color: rgb(120,120,120);
   transition: ease .3s;
+  width:100%;
 }
 .input {
   width: 100%;
-  padding: 10px;
+  padding: 9px;
   background: transparent;
   border: none;
   outline: none;
@@ -65,7 +67,7 @@ label {
 
 button {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 22px;
   background: rgb(220,220,220);
   font-weight: bold;
   color: rgb(120,120,120);
@@ -74,7 +76,7 @@ button {
   border-radius: 3px;
   cursor: pointer;
   transition: ease .3s;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -90,12 +92,12 @@ button:hover {
 [type="file"]::-webkit-file-upload-button {
   background:rgb(238, 58, 52);
   border: 2px solid rgb(238, 58, 52);
-  border-radius: 4px;
+  border-radius: 2px;
   color: #fff;
   cursor: pointer;
   font-size: 12px;
   outline: none;
-  padding: 10px 25px;
+  padding: 8px 22px;
   text-transform: uppercase;
   transition: all 1s ease;
   

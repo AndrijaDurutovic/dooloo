@@ -16,13 +16,14 @@
 	                        <div class="name">
 	                            <h3 class="title">{{user.firstName}} {{user.lastName}}</h3>
                                 <h6>E-mail: {{user.email}}</h6>
-                                <h6>Phone number: {{user.phoneNumber}}</h6>
+                                <h6>Broj telefona: {{user.phoneNumber}}</h6>
                                 <h6>Role: {{user.role}}</h6>
                                
 								<a class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                                 <a class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
                                 <a class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
-	                        </div>
+							</div>
+							<button class="btn-sm btn-info" (click)="updateUser(user.id)" style="margin-bottom: 15px;">Izmeni podatke</button>
 	                    </div>
     	            </div>
                 </div>

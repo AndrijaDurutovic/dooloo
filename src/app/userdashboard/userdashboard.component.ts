@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginAuthService} from '../login-auth.service';
 import {UserService} from '../user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class UserdashboardComponent implements OnInit {
     
   
 
-  constructor(private authService: LoginAuthService, private userservice: UserService) 
+  constructor(private router: Router,private authService: LoginAuthService, private userservice: UserService) 
   { 
     this.authService.isLoggedIn();
     this.loginuser = JSON.parse(localStorage.getItem('currentUser'));
@@ -32,5 +33,8 @@ export class UserdashboardComponent implements OnInit {
        
       })
   }
+  updateUser(id){
+    this.router.navigate(['update', id])
+    }
 
 }

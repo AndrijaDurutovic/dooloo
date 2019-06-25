@@ -3,6 +3,8 @@ import { UserService } from '../user.service';
 import { LoginAuthService } from '../login-auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
+import { Form, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -12,42 +14,55 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+      
+        selectedFile: File 
+        public slika: any 
 
-  selectedFile: File 
-  public slika: any 
 
-  public user: any = {
-    firstName: null,
-    lastName: null,
-    email:null,
-    phone:null,
-    role:'USER',
-  profilePicPath: null
-  };
+        public user: any = {
+        firstName: null,
+        lastName: null,
+        password: null,
+        confirmPassword:null,
+        email:null,
+        phone:null,
+        role:'USER',
+        profilePicPath: null
+         };
+       
+            
 
-  constructor(private http: HttpClient,private userService: UserService, private authService: LoginAuthService, private toastr: ToastrService) { 
+  constructor(private router: Router,private http: HttpClient,private userService: UserService, private authService: LoginAuthService, private toastr: ToastrService) { 
     this.authService.isLoggedIn();
   }
 
   ngOnInit() {
+   
+    
+    
   }
   saveUser(user:any, userForm: any,){
-   
-    user.enabled = true;
-    this.userService.saveUser(user).subscribe((response) => {
-      if(response){
+    if(this.user.password===this.user.confirmPassword){
+      user.enabled = true;
+      this.userService.saveUser(user).subscribe((response) => {
+        if(response){
+          this.router.navigate(['/login'])
+          console.log(response);
+          userForm.reset();
+          this.toastr.success('Uspesno ste se registrovali',
+          'Dobrodosli')
+        }
+      },  err => {
         
-        console.log(response);
-        userForm.reset();
         this.toastr.success('Uspesno ste se registrovali',
-        'Dobrodosli')
-      }
-    },  err => {
-      
-      this.toastr.success('Uspesno ste se registrovali',
-    'Dobrodosli')}
-   
-    )
+      'Dobrodosli')}
+     
+      )
+
+    }else{
+      this.toastr.warning('Lozinke se razlikuju, unesite iste!')
+    }
+  
   }
   onFileSelected(event){
     console.log(event);
@@ -67,6 +82,12 @@ export class SignupComponent implements OnInit {
     });
   }
 
+  }
+  
+  
+ 
+
+ 
+ 
 
 
-}

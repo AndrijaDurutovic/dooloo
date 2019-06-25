@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <flx-ui-datatable 
-    [headers]="['Profile Picture','Firstname','Lastname', 'Email', 'Phone', 'Role']"
+    [headers]="['Profilna slika','Ime','Prezime', 'Email', 'Telefon', 'Role']"
     [dataKeys]="['profilePicPath','firstName', 'lastName', 'email', 'phoneNumber', 'role' ]"
     [dataUrl]="'https://doolooapp.herokuapp.com/users'"
 
-    [limit]="7"
-    
+    [limit]="5"
+    searchPlaceholder="Unesi podatke za pretragu:"
     spinnerSrc="https://cdn-images-1.medium.com/max/1600/0*cWpsf9D3g346Va20.gif"
     [hasActionButtons]="true"
     (firstActionButtonClicked)="firstButtonClicked($event)"

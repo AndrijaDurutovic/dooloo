@@ -74,6 +74,9 @@ onUpload(){
 
   });
 }
+updateUser(id){
+  this.router.navigate(['update', id])
+  }
     
 
 }
